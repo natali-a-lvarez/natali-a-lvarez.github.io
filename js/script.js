@@ -13,16 +13,11 @@ const obs = new IntersectionObserver(
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
-      icon.style.display = "none";
       logo.style.display = "none";
     }
 
     if (ent.isIntersecting === true) {
       document.body.classList.remove("sticky");
-
-      if ((icon.style.display = "none")) {
-        icon.style.display = "inline-block";
-      }
 
       if ((logo.style.display = "none")) {
         logo.style.display = "inline-block";
@@ -59,6 +54,25 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 nav.addEventListener("mouseout", function (e) {});
+
+////////////// TITTLE MOBILE NAVIGATION /////////////////
+const primaryNav = document.querySelector(".nav_list");
+const navToggle = document.querySelector(".btn-nav-toggle");
+const mobileNavIcon = document.querySelector(".mobile-nav-icon");
+
+navToggle.addEventListener("click", () => {
+  const visibility = nav.getAttribute("data-visible");
+
+  if (visibility === "false") {
+    nav.setAttribute("data-visible", "true");
+    navToggle.setAttribute("aria-expanded", "true");
+    mobileNavIcon.setAttribute("name", "close-outline");
+  } else if (visibility === "true") {
+    nav.setAttribute("data-visible", "false");
+    navToggle.setAttribute("aria-expanded", "false");
+    mobileNavIcon.setAttribute("name", "menu-outline");
+  }
+});
 
 ////////////// TITTLE SMOOTH SCROLLING /////////////////
 const allLinks = document.querySelectorAll("a:link");
@@ -140,8 +154,6 @@ const slider = function () {
   const dotContainer = document.querySelector(".dots");
 
   const slider = document.querySelector(".slider");
-  slider.style.transform = "scale(0.4) translateX(-500px)";
-  slider.style.overflow = "visible";
 
   let curSlide = 0;
   const maxSlide = slides.length;

@@ -1,14 +1,13 @@
 /* ********** SECTION NAV *************** */
-.nav_container {
+.nav {
   display: flex;
-  gap: 27.5rem;
   align-items: center;
   justify-content: space-between;
 
   background-color: var(--color-primary);
   height: 8rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .logo {
@@ -18,18 +17,15 @@
 
 .nav_list {
   display: flex;
-  gap: 1.2rem;
+  gap: 2rem;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   list-style: none;
-  margin-left: auto;
-
-  padding: 8rem;
 }
 
 .nav_link {
   font-size: 2.2rem;
-  color: var(--fc-primary);
+  color: var(--color-tertiary);
   padding: 1rem;
 }
 
@@ -44,7 +40,7 @@
 
 .nav_btn {
   cursor: pointer;
-  margin: 2.8rem;
+  padding-right: 0.8rem;
 }
 
 .nav-icon {
@@ -53,15 +49,36 @@
   width: 3.5rem;
 }
 
-.sticky .nav_container {
-  padding-left: 0;
+.nav_btn:hover {
+  transition: 0.2s;
+  transform: scale(1.08);
+}
+
+/* STICKY NAV */
+.sticky .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   position: fixed;
+  top: 0;
   width: 100%;
   height: 6rem;
   background-color: rgba(45, 42, 40, 0.95);
-  color: #eae1d4;
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .nav_link {
+  color: #eae1d4;
+}
+
+.sticky .nav_list {
+  gap: 4rem;
+}
+
+.sticky .nav_btn {
+  position: absolute;
+  right: 8%;
 }
 
 /* ********** SECTION HERO *************** */
@@ -75,7 +92,6 @@
   background-image: url(/src/light-background.jpg);
   background-size: cover;
   height: 90vh;
-  width: 100vw;
   position: relative;
 }
 
@@ -87,7 +103,7 @@
 }
 
 .hero_welcome {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   display: inline;
   background-color: var(--color-welcome);
   padding: 2rem;
@@ -97,7 +113,7 @@
 }
 
 .hero_welcome-trianlge {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   display: block;
   padding: 2rem;
   border-radius: 4px;
@@ -110,6 +126,8 @@
 }
 
 .hero_header {
+  font-family: "Yeseva One", cursive;
+  font-size: 8rem;
   color: var(--color-tertiary);
   font-weight: 400;
   width: 50rem;
@@ -125,7 +143,6 @@
 
 .about_description {
   text-align: center;
-  width: 60%;
   font-size: 2.4rem;
   line-height: 2;
 }
@@ -136,29 +153,28 @@
 }
 
 /* SLIDER */
+
 .slider {
   position: relative;
-  max-width: 100rem;
-  height: 50rem;
-  margin: 0 auto;
-  margin-left: 0;
-
-  /* IN THE END */
+  width: 90%;
+  height: 55rem;
   overflow: hidden;
+
+  background-color: var(--color-primary);
+  box-shadow: 0 0.3rem 1.4rem rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
 
 .slide {
-  /* position: absolute; */
-  position: relative;
+  position: absolute;
   top: 0;
-  width: 75rem;
-  height: 55rem;
-  background-color: var(--color-primary);
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-
-  /* THIS creates the animation! */
+  width: 100%;
+  height: 100%;
   transition: transform 1s;
+  margin: 0;
+  background-color: var(--color-primary);
+
+  border-radius: 8px;
 }
 
 .slider__btn {
@@ -195,7 +211,7 @@
 
 .dots {
   position: absolute;
-  bottom: -5%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -204,8 +220,8 @@
 .dot {
   border: none;
   background-color: var(--color-secondary);
-  height: 1rem;
-  width: 1rem;
+  height: 0.8rem;
+  width: 0.8rem;
   border-radius: 50%;
   margin-right: 1.75rem;
   cursor: pointer;
@@ -220,7 +236,6 @@
 }
 
 .active-dot {
-  /* background-color: #fff; */
   background-color: var(--color-tertiary);
   opacity: 1;
 }
@@ -241,6 +256,7 @@
 
 .portfolio_img {
   height: 30rem;
+  max-width: 60rem;
   border-radius: 8px;
 
   position: absolute;
@@ -259,37 +275,37 @@
   font-size: 2.4rem;
 
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
   left: 50%;
   transform: translate(-50%, 0);
 }
 
 /* ********** SECTION CONTACT *************** */
-.about_content-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-}
 
-.contact_titles {
+.contact_subtitles {
   display: inline-block;
   color: var(--color-primary);
   background-color: var(--color-tertiary);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem;
   border-radius: 8px;
   font-size: 3rem;
+  width: 20rem;
 }
 
-.contact-title-container {
+.contact-title-block {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.titles_icons {
+.contact_icons {
   display: flex;
   gap: 2rem;
+}
+
+#find-me-icons {
+  margin-bottom: 8rem;
 }
 
 .contact-icons-sayhi {

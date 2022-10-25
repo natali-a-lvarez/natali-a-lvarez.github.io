@@ -1,0 +1,296 @@
+/**********************/
+/* BELOW 1344PX (small desktops) */
+/**********************/
+
+@media (max-width: 78em) {
+  html {
+    font-size: 59%;
+  }
+
+  .section-container {
+    padding: 3rem 8rem;
+  }
+
+  .slider_btn {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+
+@media (max-width: 68em) {
+  /* GENERAL */
+  html {
+    font-size: 56%;
+  }
+
+  .section_title {
+    font-size: 7rem;
+  }
+
+  .section-container {
+    height: 70vh;
+    padding: 2rem 6rem;
+    gap: 4rem;
+  }
+
+  /* HERO */
+  .hero_container {
+    height: 80vh;
+  }
+  /* ABOUT */
+  .about_description {
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  /* SLIDER */
+  .slider {
+    width: 80%;
+    height: 40rem;
+  }
+
+  .portfolio_img {
+    max-width: 50rem;
+    height: 23rem;
+  }
+
+  .portfolio_title {
+    font-size: 2rem;
+    bottom: 10%;
+  }
+
+  /* CONTACT */
+  .contact_subtitles {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 58em) {
+  /* GENERAL */
+  html {
+    font-size: 50%;
+  }
+
+  .section_title {
+    font-size: 6rem;
+  }
+
+  .section-container {
+    height: 70vh;
+    padding: 1rem 3rem;
+    gap: 3rem;
+  }
+
+  /* MOBILE NAV */
+  .nav {
+    height: 100vh;
+    width: 40%;
+    background-color: rgba(65, 61, 58, 0.95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+    justify-content: center;
+    gap: 0;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .sticky .nav {
+    height: 100vh;
+    width: 40%;
+    background-color: rgba(65, 61, 58, 0.95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+
+    justify-content: center;
+    gap: 0;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav_list {
+    gap: 8rem;
+    flex-direction: column;
+  }
+
+  .sticky .nav_list {
+    gap: 8rem;
+    flex-direction: column;
+  }
+
+  .nav_link {
+    color: #eae1d4;
+    font-size: 3rem;
+  }
+
+  .sticky .nav_link {
+    color: #eae1d4;
+    font-size: 3rem;
+  }
+
+  .logo {
+    display: none;
+    visibility: hidden;
+  }
+
+  .nav_btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .nav_btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .nav-icon {
+    color: #eae1d4;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .nav-icon {
+    color: #eae1d4;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .btn-nav-toggle {
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+
+    color: var(--color-tertiary);
+    background-repeat: no-repeat;
+    width: 5rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+  }
+
+  .mobile-nav-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .btn-nav-toggle[aria-expanded="true"] {
+    color: #eae1d4;
+  }
+
+  /* HERO */
+  .hero_container {
+    height: 90vh;
+  }
+  /* ABOUT */
+  .about_description {
+    line-height: 1.8;
+    width: 95%;
+  }
+
+  /* SLIDER */
+  .slider {
+    width: 80%;
+    height: 40rem;
+  }
+
+  .slider__btn {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2.5;
+  }
+
+  .portfolio_img {
+    max-width: 47rem;
+    height: 22rem;
+  }
+
+  .portfolio_git-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  /* CONTACT */
+  .contact-icons-sayhi {
+    height: 4rem;
+    width: 4rem;
+  }
+  .contact-icons-findme {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 43em) {
+  .section-container {
+    flex-direction: column;
+    gap: 8rem;
+    height: 75vh;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section_title {
+    transform: rotate(0deg);
+    margin-top: 8rem;
+  }
+
+  /* ABOUT */
+  .about_description {
+    width: 100%;
+  }
+
+  /* WORK */
+  .slider {
+    width: 80%;
+    height: 32rem;
+  }
+
+  .slider__btn {
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+  }
+
+  .portfolio_img {
+    max-width: 35rem;
+    height: 18rem;
+  }
+
+  .portfolio_title {
+    font-size: 1.6rem;
+  }
+
+  .portfolio_git-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact_icons {
+    justify-content: center;
+  }
+}
