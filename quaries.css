@@ -257,9 +257,10 @@
   }
 
   /* ABOUT */
+
   .about_description {
     width: 100%;
-    line-height: 1;
+    line-height: 1.1;
   }
 
   /* WORK */
