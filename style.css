@@ -81,6 +81,10 @@
   right: 8%;
 }
 
+.btn-nav-toggle {
+  display: none;
+}
+
 /* ********** SECTION HERO *************** */
 
 .hero_container {

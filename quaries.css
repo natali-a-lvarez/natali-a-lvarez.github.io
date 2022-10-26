@@ -170,6 +170,7 @@
   }
 
   .btn-nav-toggle {
+    display: block;
     cursor: pointer;
     position: fixed;
     top: 2rem;
