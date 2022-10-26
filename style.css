@@ -253,7 +253,14 @@
   height: 5rem;
 }
 
-.portfolio_git-icon:hover {
+.portfolio_git-icon:link,
+.portfolio_git-icon:visited {
+  transition: 0.15s;
+  color: var(--color-tertiary);
+}
+
+.portfolio_git-icon:hover,
+.portfolio_git-icon:active {
   transition: 0.15s;
   color: var(--color-secondary);
 }
