@@ -249,6 +249,13 @@
     margin-top: 8rem;
   }
 
+  /* NAV */
+  .nav_btn {
+    position: absolute;
+    top: 2.2rem;
+    left: 1rem;
+  }
+
   /* ABOUT */
   .about_description {
     width: 100%;
@@ -276,8 +283,8 @@
   }
 
   .portfolio_img {
-    max-width: 30rem;
-    height: 15rem;
+    max-width: 28rem;
+    height: 13rem;
   }
 
   .portfolio_title {
