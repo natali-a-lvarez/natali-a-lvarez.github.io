@@ -236,7 +236,7 @@
     flex-direction: column;
     gap: 8rem;
     height: 100%;
-    padding: 10rem 3rem;
+    margin: 10rem 3rem;
   }
 
   .content-container {
@@ -247,7 +247,6 @@
 
   .section_title {
     transform: rotate(0deg);
-    /* margin-top: 8rem; */
   }
 
   /* NAV */
@@ -261,10 +260,14 @@
 
   .about_description {
     width: 100%;
-    line-height: 1.1;
+    line-height: 1.4;
   }
 
   /* WORK */
+  .work_container {
+    padding: 10rem 3rem;
+  }
+
   .slider {
     width: 90%;
     height: 30rem;
@@ -307,5 +310,11 @@
 
   .contact_icons {
     justify-content: center;
+  }
+
+  .contact_subtitles {
+    font-size: 2.4rem;
+
+    padding: 1rem 1rem;
   }
 }
