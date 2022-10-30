@@ -60,7 +60,7 @@ const primaryNav = document.querySelector(".nav_list");
 const navToggle = document.querySelector(".btn-nav-toggle");
 const mobileNavIcon = document.querySelector(".mobile-nav-icon");
 
-navToggle.addEventListener("click", () => {
+navToggle.addEventListener("click", (e) => {
   const visibility = nav.getAttribute("data-visible");
 
   if (visibility === "false") {
