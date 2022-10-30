@@ -147,7 +147,8 @@
     left: 2rem;
   }
 
-  .nav_btn {
+  .sticky .nav_btn {
+    display: inline-flex;
     position: absolute;
     top: 2rem;
     left: 2rem;
@@ -236,7 +237,7 @@
     flex-direction: column;
     gap: 8rem;
     height: 100%;
-    margin: 10rem 3rem;
+    margin: 7rem 3rem;
   }
 
   .content-container {
